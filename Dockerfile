@@ -7,4 +7,4 @@ FROM mcr.microsoft.com/dotnet/aspnet:6.0
 WORKDIR /app
 COPY --from=build /app/out .
 
-ENTRYPOINT ["dotnet", "Bota.Giphy.dll"]
+ENTRYPOINT ["dotnet", "Botao.Giphy.dll"]
