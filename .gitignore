@@ -1,0 +1,13 @@
+.vs/
+.vscode/
+bin/
+obj/
+*/temp/
+wwwroot/
+
+.env
+*.trc
+*.user
+nuget.config
+yarn-error.log
+.npmrc
