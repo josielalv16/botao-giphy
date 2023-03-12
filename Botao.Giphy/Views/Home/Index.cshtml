@@ -1,8 +1,25 @@
-﻿@{
-    ViewData["Title"] = "Home Page";
-}
+﻿<html>
+    <body>
+        <center>
+            <br><br>
+            <button>Clique aqui</button>
+            <br><br>
+            <img src="" alt="">
+        </center>
+    </body>
 
-<div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
-</div>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+        const apiKey = 'Eh2YiZozUcgPisT6DeS5MF4eEae3rWql';
+        const tags = ['funny', 'comic', 'comical'];
+
+        $(function() {
+        $('button').click(function() {
+            $.get(`https://api.giphy.com/v1/gifs/random?api_key=${apiKey}&tag=${tags.join('+')}`, function(data) {
+            $('img').attr('src', data.data.images.downsized.url);
+            });
+        });
+        });
+    </script>
+
+</html>
